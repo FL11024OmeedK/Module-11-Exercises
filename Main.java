@@ -64,7 +64,9 @@ public class Main {
         System.out.println("=============== Exercise 5 ===============");
         // Exercise 5: Transaction History
         // Add transactions to accounts and retrieve history
-        System.out.println("TODO");
+        account.getTransactionHistory();
+        savings.getTransactionHistory();
+        checking.getTransactionHistory();
         
         
         System.out.println("");

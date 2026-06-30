@@ -13,6 +13,7 @@ public class CheckingAccount extends BankAccount {
     public void withdraw(double amount) {
         if (amount <= balance + overdraftLimit) {
             balance -= amount;
+            recordTransaction("Withdrew: " + amount);
         }
     }
 }

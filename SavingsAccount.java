@@ -13,5 +13,6 @@ public class SavingsAccount extends BankAccount {
     public void deposit(double amount) {
         double interest = amount * interestRate;
         balance += amount + interest;
+        recordTransaction("Deposited: " + amount + " with interest: " + interest);
     }
 }
