@@ -20,7 +20,7 @@ public class BankAccount {
     }
 
     public void withdraw(double amount) {
-        if (amount < balance) {
+        if (amount <= balance) {
             balance -= amount;
             recordTransaction("Withdrew: " + amount);
         }   
@@ -30,10 +30,8 @@ public class BankAccount {
         transactions.add(transaction);
     }
 
-    public void getTransactionHistory() {
-        for (String transaction : transactions) {
-            System.out.println(transaction);
-        }
+    public ArrayList<String> getTransactionHistory() {
+        return transactions;
     }
 
     @Override
