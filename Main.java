@@ -13,15 +13,19 @@ public class Main {
         System.out.println("Hello, my name is " + person.getName() + ".");
         
         // Complete the code to print "I'm [age] years old."
-        System.out.println("TODO");
+        System.out.println("I am " + person.getAge() + " years old.");
         
         
         System.out.println("");
         System.out.println("=============== Exercise 1 ===============");
         // Exercise 1: Creating a Bank Account
         // Create a BankAccount instance
+        BankAccount account = new BankAccount("A100", 500.0);
+
         // Perform deposit and withdrawal operations.
-        System.out.println("TODO");
+        account.deposit(100.0);
+        account.withdraw(50.0);
+        System.out.println(account.balance);
         
         
         System.out.println("");
@@ -29,7 +33,9 @@ public class Main {
         // Exercise 2: Creating a Savings Account
         // Create a SavingsAccount instance
         // Perform deposit operations with interest
-        System.out.println("TODO");
+        SavingsAccount savings = new SavingsAccount("S200", 500.0, 0.05);
+        savings.deposit(100.0);
+        System.out.println(savings.balance);
         
         
         System.out.println("");
@@ -37,7 +43,9 @@ public class Main {
         // Exercise 3: Creating a Checking Account
         // Create a CheckingAccount instance
         // Perform withdrawal operations with overdraft
-        System.out.println("TODO");
+        CheckingAccount checking = new CheckingAccount("C300", 500.0, 200.0);
+        checking.withdraw(600.0);
+        System.out.println(checking.balance);
         
         
         System.out.println("");
@@ -45,35 +53,45 @@ public class Main {
         // Exercise 4: Managing Customer's Accounts
         // Create a BankCustomer instance
         // Add multiple accounts and display total balance
-        System.out.println("TODO");
+        BankCustomer customer = new BankCustomer("Simon");
+        customer.addAccount(account);
+        customer.addAccount(savings);
+        customer.addAccount(checking);
+        System.out.println(customer.totalBalance());
         
         
         System.out.println("");
         System.out.println("=============== Exercise 5 ===============");
         // Exercise 5: Transaction History
         // Add transactions to accounts and retrieve history
-        System.out.println("TODO");
+        account.getTransactionHistory();
+        savings.getTransactionHistory();
+        checking.getTransactionHistory();
         
         
         System.out.println("");
         System.out.println("=============== Exercise 6 ===============");
         // Exercise 6: Generate Banking Report
         // Generate and display a customer's banking report
-        System.out.println("TODO");
+        customer.generateReport();
         
         
         System.out.println("");
         System.out.println("=============== Exercise 7 ===============");
         // Exercise 7: Update Interest Rates
         // Update the interest rate and observe calculations
-        System.out.println("TODO");
+        savings.updateInterestRate(0.10);
+        savings.deposit(100.0);
+        System.out.println(savings.balance);
         
         
         System.out.println("");
         System.out.println("=============== Exercise 8 ===============");
         // Exercise 8: Override Withdrawal Method
         // Demonstrate overridden withdrawal method
-        System.out.println("TODO");
+        System.out.println(checking.balance);
+        checking.withdraw(200.0);
+        System.out.println(checking.balance);
         
         
         System.out.println("");

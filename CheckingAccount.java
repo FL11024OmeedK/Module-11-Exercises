@@ -1,0 +1,24 @@
+public class CheckingAccount extends BankAccount {
+    // attributes
+    double overdraftLimit;
+
+    // constructor
+    public CheckingAccount(String accountNumber, double balance, double overdraftLimit) {
+        super(accountNumber, balance);
+        this.overdraftLimit = overdraftLimit;
+    }
+
+    // methods
+    @Override
+    public void withdraw(double amount) {
+        if (amount <= balance + overdraftLimit) {
+            balance -= amount;
+            recordTransaction("Withdrew: " + amount);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Checking Account - Account Number: " + accountNumber + ", Balance: " + balance + ", Overdraft Limit: " + overdraftLimit;
+    }
+}
