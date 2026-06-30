@@ -53,7 +53,11 @@ public class Main {
         // Exercise 4: Managing Customer's Accounts
         // Create a BankCustomer instance
         // Add multiple accounts and display total balance
-        System.out.println("TODO");
+        BankCustomer customer = new BankCustomer("Simon");
+        customer.addAccount(account);
+        customer.addAccount(savings);
+        customer.addAccount(checking);
+        System.out.println(customer.totalBalance());
         
         
         System.out.println("");
