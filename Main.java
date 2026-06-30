@@ -89,7 +89,9 @@ public class Main {
         System.out.println("=============== Exercise 8 ===============");
         // Exercise 8: Override Withdrawal Method
         // Demonstrate overridden withdrawal method
-        System.out.println("TODO");
+        System.out.println(checking.balance);
+        checking.withdraw(200.0);
+        System.out.println(checking.balance);
         
         
         System.out.println("");
