@@ -13,15 +13,19 @@ public class Main {
         System.out.println("Hello, my name is " + person.getName() + ".");
         
         // Complete the code to print "I'm [age] years old."
-        System.out.println("TODO");
+        System.out.println("I am " + person.getAge() + " years old.");
         
         
         System.out.println("");
         System.out.println("=============== Exercise 1 ===============");
         // Exercise 1: Creating a Bank Account
         // Create a BankAccount instance
+        BankAccount account = new BankAccount("A100", 500.0);
+
         // Perform deposit and withdrawal operations.
-        System.out.println("TODO");
+        account.deposit(100.0);
+        account.withdraw(50.0);
+        System.out.println(account.balance);
         
         
         System.out.println("");
