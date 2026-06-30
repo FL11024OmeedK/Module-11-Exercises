@@ -16,4 +16,9 @@ public class CheckingAccount extends BankAccount {
             recordTransaction("Withdrew: " + amount);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Checking Account - Account Number: " + accountNumber + ", Balance: " + balance + ", Overdraft Limit: " + overdraftLimit;
+    }
 }

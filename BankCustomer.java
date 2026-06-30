@@ -25,4 +25,14 @@ public class BankCustomer {
 
         return total;
     }
+
+    public void generateReport() {
+        System.out.println("Customer: " + name);
+
+        for (BankAccount account : accounts) {
+            System.out.println(account);
+        }
+
+        System.out.println("Total Balance: " + totalBalance());
+    }
 }

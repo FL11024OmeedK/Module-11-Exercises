@@ -35,4 +35,9 @@ public class BankAccount {
             System.out.println(transaction);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Bank Account - Account Number: " + accountNumber + ", Balance: " + balance;
+    }
 }

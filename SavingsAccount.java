@@ -15,4 +15,9 @@ public class SavingsAccount extends BankAccount {
         balance += amount + interest;
         recordTransaction("Deposited: " + amount + " with interest: " + interest);
     }
+
+    @Override
+    public String toString() {
+        return "Savings Account - Account Number: " + accountNumber + ", Balance: " + balance + ", Interest Rate: " + interestRate;
+    }
 }
