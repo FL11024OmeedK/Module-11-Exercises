@@ -20,4 +20,8 @@ public class SavingsAccount extends BankAccount {
     public String toString() {
         return "Savings Account - Account Number: " + accountNumber + ", Balance: " + balance + ", Interest Rate: " + interestRate;
     }
+
+    public void updateInterestRate(double newRate) {
+        interestRate = newRate;
+    }
 }

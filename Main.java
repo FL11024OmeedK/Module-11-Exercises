@@ -80,7 +80,9 @@ public class Main {
         System.out.println("=============== Exercise 7 ===============");
         // Exercise 7: Update Interest Rates
         // Update the interest rate and observe calculations
-        System.out.println("TODO");
+        savings.updateInterestRate(0.10);
+        savings.deposit(100.0);
+        System.out.println(savings.balance);
         
         
         System.out.println("");
